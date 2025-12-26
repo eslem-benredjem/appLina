@@ -1,0 +1,29 @@
+<h2 *ngIf="!isEditMode">Ajouter une formation</h2>
+<h2 *ngIf="isEditMode">Modifier la formation</h2>
+
+<form (ngSubmit)="save()">
+  <label>Titre</label>
+  <input type="text" [(ngModel)]="formation.titre" name="titre" required>
+
+  <label>Description</label>
+  <textarea [(ngModel)]="formation.description" name="description" required></textarea>
+
+  <label>Charge horaire</label>
+  <input type="number" [(ngModel)]="formation.chargeHoraire" name="chargeHoraire" required>
+
+  <label>Niveau</label>
+  <input type="text" [(ngModel)]="formation.niveau" name="niveau" required>
+
+  <label>Programme PDF (URL)</label>
+  <input type="text" [(ngModel)]="formation.programmePDF" name="programmePDF">
+
+  <label>Tags (séparés par ,)</label>
+  <input type="text" [(ngModel)]="tagsInput" name="tags">
+
+  <label>Catégories (séparées par ,)</label>
+  <input type="text" [(ngModel)]="categoriesInput" name="categories">
+
+  <br><br>
+  <button type="submit">💾 Enregistrer</button>
+  <button type="button" (click)="cancel()">❌ Annuler</button>
+</form>

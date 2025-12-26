@@ -1,0 +1,28 @@
+<h2>Liste des formateurs</h2>
+
+<button (click)="addFormateur()">Ajouter un formateur</button>
+
+<table border="1" width="100%">
+  <tr>
+    <th>Nom</th>
+    <th>Prénom</th>
+    <th>Email</th>
+    <th>Téléphone</th>
+    <th>CIN</th>
+    <th>Spécialités</th>
+    <th>Actions</th>
+  </tr>
+
+  <tr *ngFor="let f of formateurs">
+    <td>{{ f.nom }}</td>
+    <td>{{ f.prenom }}</td>
+    <td>{{ f.email }}</td>
+    <td>{{ f.tel }}</td>
+    <td>{{ f.cin }}</td>
+    <td>{{ f.specialites?.join(', ') }}</td>
+    <td>
+      <button (click)="editFormateur(f.id)">Edit</button>
+      <button (click)="deleteFormateur(f.id)">Delete</button>
+    </td>
+  </tr>
+</table>

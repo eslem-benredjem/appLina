@@ -1,0 +1,44 @@
+<h2 *ngIf="!isEditMode">Ajouter une session</h2>
+<h2 *ngIf="isEditMode">Modifier une session</h2>
+
+<form (ngSubmit)="save()">
+
+  <label>Formation :</label>
+<select [(ngModel)]="session.formationId" name="formationId" required>
+  <option *ngFor="let f of formations" [ngValue]="f.id">{{ f.titre }}</option>
+</select>
+
+
+  <label>Formateurs (1 ou 2 maximum)</label>
+  <div *ngFor="let t of formateurs">
+    <input 
+      type="checkbox" 
+      [value]="t.id" 
+      [checked]="selectedFormateurs.includes(t.id)" 
+      (change)="onFormateurChange($event)">
+    {{ t.nom }} {{ t.prenom }}
+  </div>
+
+  <label>Candidats (max 15)</label>
+  <div *ngFor="let c of candidats">
+    <input 
+      type="checkbox" 
+      [value]="c.id" 
+      [checked]="selectedCandidats.includes(c.id)" 
+      (change)="onCandidatChange($event)">
+    {{ c.nom }} {{ c.prenom }}
+  </div>
+
+  <label>Date de début</label>
+  <input type="date" [(ngModel)]="session.dateDebut" name="dateDebut" required>
+
+  <label>Date de fin</label>
+  <input type="date" [(ngModel)]="session.dateFin" name="dateFin" required>
+
+  <label>Description</label>
+  <textarea [(ngModel)]="session.description" name="description"></textarea>
+
+  <br><br>
+  <button type="submit">💾 Enregistrer</button>
+  <button type="button" (click)="cancel()">❌ Annuler</button>
+</form>

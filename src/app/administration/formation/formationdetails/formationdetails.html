@@ -1,0 +1,16 @@
+<h2>Détail de la formation</h2>
+
+<div *ngIf="formation as f">
+  <p><strong>Titre :</strong> {{ f.titre }}</p>
+  <p><strong>Description :</strong> {{ f.description }}</p>
+  <p><strong>Charge horaire :</strong> {{ f.chargeHoraire }}h</p>
+  <p><strong>Niveau :</strong> {{ f.niveau }}</p>
+  <p><strong>Tags :</strong> {{ f.tags?.join(', ') }}</p>
+  <p><strong>Catégories :</strong> {{ f.categories?.join(', ') }}</p>
+
+  <button *ngIf="f.programmePDF" (click)="downloadPDF()">Télécharger le programme PDF</button>
+</div>
+
+<div *ngIf="!formation">
+  <p>Aucune formation trouvée.</p>
+</div>

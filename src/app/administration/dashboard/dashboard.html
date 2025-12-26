@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISET Rades - Admin Dashboard</title>
+    <link rel="stylesheet" >
+</head>
+<body>
+    <div class="container">
+       <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <h1>Dashboard</h1>
+                <div class="user-info">
+                    <div>
+                        <div style="font-weight: 600;">Administrator</div>
+                        <div style="font-size: 12px; color: #7f8c8d;">admin@iset-rades.tn</div>
+                    </div>
+                    <div class="user-avatar">A</div>
+                </div>
+            </div>
+
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-value">156</div>
+                            <div class="stat-label">Registered Candidates</div>
+                        </div>
+                        <div class="stat-icon purple">👥</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-value">24</div>
+                            <div class="stat-label">Active Instructors</div>
+                        </div>
+                        <div class="stat-icon blue">👨‍🏫</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-value">42</div>
+                            <div class="stat-label">Available Trainings</div>
+                        </div>
+                        <div class="stat-icon green">📚</div>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <div>
+                            <div class="stat-value">18</div>
+                            <div class="stat-label">Ongoing Sessions</div>
+                        </div>
+                        <div class="stat-icon orange">📅</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Candidates -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">Recent Candidates</h2>
+                    <button class="btn btn-primary">+ Add Candidate</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Candidate</th>
+                             <th>Phone</th>
+                            <th>Registered Sessions</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="candidate-info">
+                                    <img src="https://i.pravatar.cc/150?img=1" alt="Sarah Johnson" class="candidate-photo">
+                                    <div class="candidate-details">
+                                        <span class="candidate-name">Sarah Johnson</span>
+                                        <span class="candidate-email">sarah.johnson@email.com</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>+216 98 765 432</td>
+                            <td>3</td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="btn-sm btn-view">View</button>
+                                    <button class="btn-sm btn-edit">Edit</button>
+                                    <button class="btn-sm btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Recent Sessions -->
+            <div class="content-section">
+                <div class="section-header">
+                    <h2 class="section-title">Recent Sessions</h2>
+                    <button class="btn btn-primary">+ New Session</button>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Training</th>
+                            <th>Instructor</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Enrolled</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Advanced Web Development</td>
+                            <td>Ahmed Ben Ali</td>
+                            <td>20/12/2025</td>
+                            <td>15/01/2026</td>
+                            <td>12/15</td>
+                            <td><span class="badge badge-success">Ongoing</span></td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="btn-sm btn-edit">Edit</button>
+                                    <button class="btn-sm btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Data Science & AI</td>
+                            <td>Fatma Gharbi</td>
+                            <td>05/01/2026</td>
+                            <td>30/01/2026</td>
+                            <td>15/15</td>
+                            <td><span class="badge badge-warning">Full</span></td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="btn-sm btn-edit">Edit</button>
+                                    <button class="btn-sm btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Digital Marketing</td>
+                            <td>Mohamed Trabelsi</td>
+                            <td>15/01/2026</td>
+                            <td>10/02/2026</td>
+                            <td>8/15</td>
+                            <td><span class="badge badge-info">Scheduled</span></td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="btn-sm btn-edit">Edit</button>
+                                    <button class="btn-sm btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>UX/UI Design</td>
+                            <td>Sarra Mansour</td>
+                            <td>22/01/2026</td>
+                            <td>18/02/2026</td>
+                            <td>6/15</td>
+                            <td><span class="badge badge-info">Scheduled</span></td>
+                            <td>
+                                <div class="action-btns">
+                                    <button class="btn-sm btn-edit">Edit</button>
+                                    <button class="btn-sm btn-delete">Delete</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

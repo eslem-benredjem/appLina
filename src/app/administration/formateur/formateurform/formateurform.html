@@ -1,0 +1,40 @@
+<h2 *ngIf="!isEditMode">Ajouter un formateur</h2>
+<h2 *ngIf="isEditMode">Modifier un formateur</h2>
+
+<form (ngSubmit)="save()">
+
+  <label>Nom</label>
+  <input type="text" [(ngModel)]="formateur.nom" name="nom" required>
+
+  <label>Prénom</label>
+  <input type="text" [(ngModel)]="formateur.prenom" name="prenom" required>
+
+  <label>Email</label>
+  <input type="email" [(ngModel)]="formateur.email" name="email" required>
+
+  <label>Téléphone</label>
+  <input type="text" [(ngModel)]="formateur.tel" name="tel" required>
+
+  <label>CIN</label>
+  <input type="text" [(ngModel)]="formateur.cin" name="cin" required>
+
+  <label>Photo (URL)</label>
+  <input type="text" [(ngModel)]="formateur.photo" name="photo">
+
+  <label>CV (URL)</label>
+  <input type="text" [(ngModel)]="formateur.cv" name="cv">
+
+  <label>Spécialités</label>
+  <input type="text" [(ngModel)]="newSpecialite" name="newSpecialite">
+  <button type="button" (click)="addSpecialite()">Ajouter</button>
+
+  <ul>
+    <li *ngFor="let s of formateur.specialites; let i = index">
+      {{ s }} <button type="button" (click)="removeSpecialite(i)">Supprimer</button>
+    </li>
+  </ul>
+
+  <br>
+  <button type="submit">💾 Enregistrer</button>
+  <button type="button" (click)="cancel()">❌ Annuler</button>
+</form>

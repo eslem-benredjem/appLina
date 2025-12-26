@@ -1,0 +1,23 @@
+<h2>Liste des sessions</h2>
+<button (click)="addSession()">Ajouter une session</button>
+
+<table border="1" width="100%">
+  <tr>
+    <th>Formation</th>
+    <th>Formateurs</th>
+    <th>Candidats</th>
+    <th>Dates</th>
+    <th>Actions</th>
+  </tr>
+
+  <tr *ngFor="let s of sessions">
+    <td>{{ getFormationTitre(s.formationId) }}</td>
+    <td>{{ getFormateursNoms(s.formateurs) }}</td>
+    <td>{{ getCandidatsNoms(s.candidats) }}</td>
+    <td>{{ s.dateDebut }} - {{ s.dateFin }}</td>
+    <td>
+      <button (click)="editSession(s.id)">Modifier</button>
+      <button (click)="deleteSession(s.id)">Supprimer</button>
+    </td>
+  </tr>
+</table>

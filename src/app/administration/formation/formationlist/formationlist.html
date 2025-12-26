@@ -1,0 +1,24 @@
+<h2>Liste des formations</h2>
+<button (click)="addFormation()">Ajouter une formation</button>
+
+<table border="1" width="100%">
+  <tr>
+    <th>Titre</th>
+    <th>Description</th>
+    <th>Charge horaire</th>
+    <th>Niveau</th>
+    <th>Actions</th>
+  </tr>
+
+  <tr *ngFor="let f of formations">
+    <td>{{ f.titre }}</td>
+    <td>{{ f.description }}</td>
+    <td>{{ f.chargeHoraire }}h</td>
+    <td>{{ f.niveau }}</td>
+    <td>
+      <button (click)="editFormation(f.id)">Modifier</button>
+      <button (click)="deleteFormation(f.id)">Supprimer</button>
+      <button (click)="viewDetail(f.id)">Détails</button>
+    </td>
+  </tr>
+</table>

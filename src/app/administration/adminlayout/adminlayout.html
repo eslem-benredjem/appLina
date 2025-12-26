@@ -1,0 +1,63 @@
+<div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="logo">
+            <h2>ISET Rades</h2>
+            <p>Admin Panel</p>
+        </div>
+        <ul class="menu">
+            <li class="menu-item" >
+                <i>📊</i>
+                <span><a [routerLink]="'/dashboard'">Dashboard</a></span>
+            </li>
+            <li class="menu-item" >
+                <i>👥</i>
+                <span><a [routerLink]="'/admin-space/candidates'">Candidates</a></span>
+            </li>
+            <li class="menu-item" >
+                <i>👨‍🏫</i>
+                <span><a [routerLink]="'/admin-space/trainers'">Formateurs</a></span>
+            </li>
+            <li class="menu-item" >
+                <i>📚</i>
+                <span><a [routerLink]="'/admin-space/formations'">Formations</a></span>
+            </li>
+            <li class="menu-item" >
+                <i>📚</i>
+                <span><a [routerLink]="'/admin-space/sessions'">Session</a></span>
+            </li>
+            <li class="menu-item logout-item">
+                <i>🚪</i>
+                <span >Logout</span>
+            </li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-left">
+                <nav class="breadcrumb">
+                    <a [routerLink]="'/dashboard'">Dashboard</a>
+                </nav>
+            </div>
+            <div class="user-info">
+                <div class="notification-bell">
+                    <i>🔔</i>
+                    <span class="notification-count">3</span>
+                </div>
+                <div class="user-avatar">AD</div>
+                <div class="user-details">
+                    <span class="user-name">Admin User</span>
+                    <span class="user-role">Administrator</span>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Dynamic Content -->
+        <div class="content-wrapper">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
